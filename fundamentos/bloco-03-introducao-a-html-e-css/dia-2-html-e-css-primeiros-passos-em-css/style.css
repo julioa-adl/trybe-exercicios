@@ -1,0 +1,39 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: cyan;
+    text-align: center;
+  }
+  h1 {
+      font-family: sans-serif;
+      font-size: 65px;
+      color: orange;
+      text-align: center;
+  }
+  li {
+      background-color: greenyellow;
+  }
+  .colorUleP{
+      background-color: green;
+  }
+  p {
+    font-weight: 600;
+    font-size: 3em;
+  }
+  #amare{
+    background-color: yellow;
+  }
+  #verme{
+    background-color: red;
+  }
+  #marro{
+    background-color: brown;
+  }
+  ul {
+    font-family: Lucida Sans;
+    color: black;
+    text-align: left;
+    line-height: 50px;
+    text-shadow: 01px 01px grey;
+    text-decoration: underline;
+  }
