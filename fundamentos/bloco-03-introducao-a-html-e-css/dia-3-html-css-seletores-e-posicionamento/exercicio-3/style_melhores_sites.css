@@ -1,0 +1,12 @@
+.textos {
+    text-align: center;
+}
+li:hover {
+    background-color: coral;
+}
+li:active {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.listas {
+    list-style: none;
+}
