@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 🚀 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+      let corpo = document.querySelector('body');
+
+      let tituloExercicio = document.createElement('h1');
+      tituloExercicio.innerText = 'Exercício 5.2 - JavaScript DOM';
+
+      corpo.appendChild(tituloExercicio);
+
+      // 🚀 Adicione a tag main com a classe main-content como filho da tag body;
+      let criarMain = document.createElement('main');
+      criarMain.className = ('main-content');
+      corpo.appendChild(criarMain);
+
+      // 🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      let mainSection = document.createElement('section');
+      mainSection.className = ('center-content');
+
+      criarMain.appendChild(mainSection);
+      // 🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      let pSectionMain = document.createElement('p');
+      pSectionMain.innerText = 'Algum Texto';
+
+      mainSection.appendChild(pSectionMain);
+      // 🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let mainSection2 = document.createElement('section');
+      mainSection2.className = ('left-content');
+
+      criarMain.appendChild(mainSection2);
+      // 🚀 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      let mainSection3 = document.createElement('section');
+      mainSection3.className = ('right-content');
+
+      criarMain.appendChild(mainSection3);
+      // 🚀 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      let imgSection2 = document.createElement('img');
+      imgSection2.className = ('small-image');
+      imgSection2.src = ('https://picsum.photos/200');
+
+      mainSection2.appendChild(imgSection2);
+      // 🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let listSection3 = document.createElement('ul');
+      let listaNum = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      mainSection3.appendChild(listSection3);
+
+      for (i = 0; i < listaNum.length; i += 1) {
+        let createLi = document.createElement('li');
+
+        listSection3.appendChild(createLi);
+
+        createLi.innerText = listaNum[i];
+      }
+      // 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (index = 0; index < 3; index += 1) {
+        let h3Main = document.createElement('h3');
+        // h3Main.innerText = 'Teste' + index;
+
+        criarMain.appendChild(h3Main);
+      }
+      
+    </script>
+  </body>
+</html>
